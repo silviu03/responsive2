@@ -99,6 +99,8 @@ nav a span {
 .middle-wrapper > * {
     flex: 1 1 33%;
 }
+
+/* position, size si repeat ti se repeta pe fiecare dintre aceste seletii, dorim sa evitam situatii de acest tip de obicei */
 .middle-wrapper > div:first-child {
     order: 1;
     background-image: url(./poze/concert-hall.jpg);
@@ -192,6 +194,8 @@ nav a span {
 .bot-wrapper h2 span {
     color: #c09c78;
 }
+
+/* mai trebuie lucrat putin la layout aici, pe o rezolutie mai mica nu se respecta layout-ul */
 .input-wrapper {
     width: 70%;
     margin: 0 auto;
