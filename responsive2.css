@@ -22,6 +22,7 @@ section {
     height: 100%;
     background-color: black;
     opacity: 0.3;
+    z-index: 1;
 }
 .top-wrapper {
     background-image: url(./poze/bg-header.jpg);
@@ -30,6 +31,7 @@ section {
     background-repeat: no-repeat;
     position: relative;
     font-size: 16px;
+    z-index: 5;
 }
 .invasive-box {
     position: absolute;
@@ -76,16 +78,19 @@ header h1 {
 }
 
 nav {
-    padding: 1.5em 5em 0 0;
+    padding: 1.5em 0 0 0;
     text-align: end;
+    
 }
 nav a {
     text-decoration: none;
     color: #fff;  
+    
 }
 nav a span {
     font-size: 1.3em;
     padding-right: 3em;
+    
 }
 
 .middle-wrapper {
@@ -100,48 +105,29 @@ nav a span {
     flex: 1 1 33%;
 }
 
-/* position, size si repeat ti se repeta pe fiecare dintre aceste seletii, dorim sa evitam situatii de acest tip de obicei */
 .middle-wrapper > div:first-child {
     order: 1;
-    background-image: url(./poze/concert-hall.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url(./poze/concert-hall.jpg);  
 }
 .middle-wrapper > div:nth-child(2) {
     order: 2;
-    background-image: url(./poze/bedroom-2.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url(./poze/bedroom-2.jpg);  
 }
 .middle-wrapper > div:nth-child(3) {
     order: 3;
-    background-image: url(./poze/hotel.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url(./poze/hotel.jpg);   
 }
 .middle-wrapper > div:nth-child(4) {
     order: 4;
-    background-image: url(./poze/bedroom-1.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-image: url(./poze/bedroom-1.jpg); 
 }
 .middle-wrapper > div:nth-child(5) {
     order: 5;
     background-image: url(./poze/library.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
-.middle-wrapper > div:last-child {
+.middle-wrapper > div:nth-child(6){
     order: 6;
     background-image: url(./poze/kitchen.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 .middle-wrapper > div {
     position: relative;
@@ -149,8 +135,13 @@ nav a span {
     flex-direction: column;
     padding: 20px;
     height: 15em;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-
+.middle-wrapper > div span {
+    z-index: 5;
+}
 .Architecture {
     position: absolute;
     bottom: 65px;
@@ -170,6 +161,7 @@ nav a span {
     background-color: #2b2b2b;
     text-align: center;
     padding-top: 80px;
+    z-index: 5;
 }
 .bot-wrapper a {
     font-size: 1em;
@@ -195,9 +187,8 @@ nav a span {
     color: #c09c78;
 }
 
-/* mai trebuie lucrat putin la layout aici, pe o rezolutie mai mica nu se respecta layout-ul */
 .input-wrapper {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -208,7 +199,7 @@ nav a span {
 .input-box {
     display: flex;
     flex-wrap: wrap;
-    width: 50%;
+    width: 25em;
     
 }
 .input-box div {
@@ -224,6 +215,8 @@ nav a span {
 #message-area {
     background-color: #3d3d3d;
     border: none;
+    padding-top: 10px;
+    padding-left: 10px;
 }
 .btn-wrapper {
     margin-top: 50px;
@@ -261,6 +254,7 @@ nav a span {
     .meniu-wrapper {
         display: block;
         text-align: end;
+        z-index: 5;
     }
     .meniu-wrapper div label {
         display: block;
@@ -312,6 +306,19 @@ nav a span {
     .middle-wrapper > * {
         flex: 1 1 100%;
     }
+    .middle-wrapper > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+    }
+    .middle-wrapper > div span:nth-child(2) {
+        color: #c09c78;
+    }
+    .Architecture, .Interior {
+        position: initial;
+        transform: rotate(0deg);
+    }
     .input-wrapper {
         width: 100%;
         display: flex;
@@ -328,6 +335,14 @@ nav a span {
         margin-bottom: 1em;
     }
     .textarea-box textarea {
-        width: 70%;
+        width: 72.8%;
+    }
+    .bot-wrapper {
+        z-index: 5;  
+    }
+    .btn-wrapper {
+        text-align: end;
+        margin-right: 77px;
+        font-size: 1em;
     }
 }
