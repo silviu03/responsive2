@@ -291,8 +291,8 @@ nav a span {
     #toggle {
         display: none;
     }
-    #toggle:checked + .mobile-navbar {
-        display: block;
+    /* #toggle:checked + .mobile-navbar {
+        display: block; */
     }
     .invasive-box {
         width: 11em;
