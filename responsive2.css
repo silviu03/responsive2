@@ -92,7 +92,9 @@ nav a span {
     padding-right: 3em;
     
 }
-
+.mobile-navbar {
+    display: none;
+}
 .middle-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -294,7 +296,7 @@ nav a span {
         background-color: #3d3d3d;
         z-index: 999;
         color: #fff;
-
+        display: block;
     }
     .nav-list {
         display: flex;
